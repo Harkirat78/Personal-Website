@@ -19,7 +19,23 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  .container {
+    width: 100%;
+    max-width: 1500px; 
+    margin: 0 auto;
+  }
+
+  .header-text {
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 4vw;
+    line-height: 1.2;
+  }
+
   #header {
     width: 100%;
     height: 100vh;
@@ -87,7 +103,7 @@
     font-size: 60px;
     text-align: right;
   }
-  
+
   .btn-shine {
     background: linear-gradient(to bottom, #F065D7 0%, #F4A764 72%);
     background-size: 200%;
@@ -97,7 +113,7 @@
     -webkit-text-fill-color: transparent;
     animation: blink 2s ease-in-out infinite;
   }
-  
+
   @keyframes blink {
     0% {
       opacity: 0.8;
@@ -111,15 +127,7 @@
   }
   
 
-
-
-
-
-
-
-
-
-
+  /* ABOUT ME SECTION */
 
 
   #about {
@@ -207,7 +215,7 @@
   
   .tab-contents ul li span {
     color: #d369bf;
-    font-size: 14px;
+    font-size: 19px;
   }
   
   .tab-contents {
@@ -221,7 +229,7 @@
 
 
 
-
+ /* PROJECTS SECTION */
 
 
 
@@ -253,7 +261,7 @@
   .layer {
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #F065D7);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #d369bf);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -299,7 +307,7 @@
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #F065D7;
+    border: 1px solid #d369bf;
     padding: 16px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -326,14 +334,7 @@
 
 
 
-
-
-
-
-
-
-
-
+ /* CONTACT SECTION */
 
 
 
@@ -352,7 +353,7 @@
   }
   
   .contact-left p i {
-    color: #F065D7;
+    color: #d369bf;
     margin-right: 15px;
     font-size: 25px;
     transition: transform 0.5s;
@@ -376,13 +377,13 @@
   }
   
   .social-icons a:hover {
-    color: #F065D7;
+    color: #d369bf;
     transform: translateY(-5px);
   }
   
   .btn.btn2 {
     display: inline-block;
-    background: #F065D7;
+    background: #d369bf;
     color: rgba(0, 0, 0, 2);
     transition: background 0.2s;
   }
@@ -426,11 +427,11 @@
   }
   
   .copyright span {
-    color: #F065D7;
+    color: #d369bf;
   }
   
   #msg {
-    color: #F065D7;
+    color: #d369bf;
     margin-top: -40px;
     display: block;
   }
@@ -459,7 +460,7 @@
   }
   
   .top i {
-    color: #F065D7;
+    color: #d369bf;
     padding-left: 5px;
     font-size: 22px;
   }
