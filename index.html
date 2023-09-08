@@ -1,578 +1,277 @@
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harkirat Soomal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/new-logo.png">
+    <script src="https://kit.fontawesome.com/40bd06677d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="https://github.com"><img src="logoHS.png" class="logo"/></a>
+          <ul id="mainmenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>            
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Computer Science Student</p>
+          <h1>Hi, I'm <span class="btn-shine">Harkirat</span><br/> 
+            <span class="btn-shine">Soomal</span>
+          </h1>
+        </div>
+      </div>
+    </div>
 
-  /* Red: E87169
-    Blue: 9AF0F5
-  */
+    <!-- !------------- ABOUT ME -------------! -->
+    <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="prom.png" />
+            </div>
+            <div class="about-col-2">            
+              <h1 class="sub-title">About Me</h1> <br>
+              <span>
+                I am Harkirat Soomal, a <span id="colour">Computer Science</span> co-op student pursuing a BCOMP degree at the University of Guelph with a strong focus on software development and a potential minor in <span id="colour"> Project Management</span>. I bring a diverse skill set to the table with an aptitude for numbers which is evident through consistently high grades in mathematics. I thrive in collaborative environments, where my passion for creative work and data science can flourish. Committed to constant improvement, I am poised to make a meaningful impact in the world of technology and always try to learn and improve as much as possible.
+                <br><br>
+                
+                <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="opentab('education')">Education</p>                
+                  <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                  <p class="tab-links" onclick="opentab('technical skills')">Technical Skills</p>
+                  <p class="tab-links" onclick="opentab('additional skills')">Additional Skills</p>
+                </div>
+  
+                <div class="tab-contents active-tab" id="education">
+                  <ul>
+                    <li><span>Computer Science Co-op: University of Guelph</span><br>Sep 2022 - Present</li>
+                    <li><span>Harold M. Brathwaite Secondary School</span><br>2018 - 2022</li>
+                  </ul>
+                </div>              
+                <div class="tab-contents" id="experience">
+                  <ul>
+                    <li><span>Software Engineer Intern for GAO Tek</span>
+                      <br> • Developed elegant full-stack web applications using languages such as JavaScript, with strong emphasis on debugging as an unpaid intern<br>
+                      • Collaborated with cross-functional teams to optimize software performance, implement innovative solutions and conduct thorough testing.<br>
+                      • Demonstrated problem-solving skills, resolving complex technical issues and leveraging advanced technologies for improved efficiency and productivity.
+                    </li>
+                    <li><span>Data Adminstrator/Coordinator for Cool Summer Camp</span>
+                      <br> • Ensured accurate and organized datasets, enabling efficient analysis and decision-making for camp operations. <br>
+                      • Collaborated with cross-functional teams, providing data-driven insights to optimize processes and identify growth opportunities.<br>
+                      • Streamlined data retrieval and reporting using administration tools, empowering stakeholders with real-time information.
+                    </li>
+                    <li><span>Digital Marketing Intern at WizePrep</span>
+                      <br> • Developed and maintained HTML, CSS, JavaScript, and Python web applications, delivering optimal functionality and user experience.<br>
+                      • Collaborated with cross-functional teams to design and implement new features, improving existing applications.<br>
+                      • Assisted in digital marketing campaigns, leveraging social media, email marketing, and data analysis to target audiences and enhance campaign effectiveness.</li>
+                    <li><span>Coding Instructor at CodeNinjas</span>
+                      <br> • Taught coding fundamentals and programming languages such as JavaScript, Lua, C# and Python to students aged 7-14.<br>
+                      • Developed individualized lesson plans and activities to cater to student's unique learning styles and abilities.<br>
+                      • Fostered a positive and encouraging learning environment, inspiring students to develop their problem-solving and critical-thinking skills
+                    </li>
+                  </ul>
+                </div>
 
-  html {
-    scroll-behavior: smooth;
-  }
+                <div class="tab-contents" id="technical skills">
+                  <ul>
+                    <li><span>Languages</span>
+                      <br> • C, C++, Java, Python, Javascript/CSS/HTML, SQL, C#, Lua </br>
+                    </li>
+                    <li><span>Frameworks and Libraries</span>
+                      <br> • Django, React.js, Node.js, Spring Selenium  </br>
+                      </li>
+                    <li><span>Tools</span>
+                      <br> • Github, Gitlab, Linux Command Line Terminal, Visual Studio, PyCharm, MySQL, Valgrind, Excel, MATLAB, MacOS, Windows </br>
+                    </li>
+                  </ul>
+                </div>
 
-  body {
-    background: #080808;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+                <div class="tab-contents" id="additional skills">
+                  <ul>
+                    <li><span>Team Building</span></li>
+                    <li><span>Dependable</span></li>
+                    <li><span>Adaptable</span></li>
+                    <li><span>Communication</span></li>
+                    <li><span>Analytical</span></li>
+                    <li><span>Mathematics</span></li>
+                    <li><span>Customer Service</span></li>
+                  </ul>
+                </div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  .container {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-  }
+      <!-- !------------- PROJECTS -------------! -->
 
-  .header-text {
-    text-align: right; /* Keep the text aligned to the right */
-  }
+      <div id="projects">
+        <div class="container">
+          <h1 class="sub-title">My Work</h1>
+          <div class="work-list">
+            <div class="work">
+              <img src="SortingApp.png">
+              <div class="layer">
+                <h3>Interactive Sorting Algorithms Visualizer</h3>
+                <p>                                 
+                  Interactive JavaScript/React.js web application visualizing six key sorting algorithms features colour-coded progression, user-adjustable settings, and detailed complexity metrics for algorithms 
+                </p>
+                <a href="https://harkirat78.github.io/Sorting-Algorithms-Visualizer/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="work">
+              <img src="Calorie.jpg">
+              <div class="layer">
+                <h3>Foodie - Calorie Canvas</h3>
+                <p> 
+                  Developed a visually appealing, fun calorie tracker with use of Django, Python, frontend languages and an external API from APINinjas, utilizing data visualization techniques for enhanced nutritional analysis and informed decision-making.
+                </p>
+                <a href="https://github.com/Harkirat78/CalorieCanvas.git" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="work">
+              <img src="employee.jpg">
+              <div class="layer">
+                <h3>Employee Tracker - Advanced Linked List</h3>
+                <p> 
+                  This project focuses on using dynamic data strucuture Linked List in C to perform numerous application on a list of employees for a specfic company. This project was built in the linux command line terminal.
+                </p>
+                <a href="https://github.com/Harkirat78/EmployeesList.git" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <span class="moreProjects">
+              <div class="work">
+                <img src="images/commingsoon.png">
+                <div class="layer">
+                  <h3>Comming Soon</h3>
+                  <p> 
+                    ...
+                  </p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>            
+            </span>
+            
+          </div>        
+          <button class="btn"> See more</button>
+          <!-- <a href="#" class="btn">See more</a> -->
+        </div>
+      </div>
+  
 
-  h1 {
-    font-size: 4vw;
-    line-height: 1.2;
-    margin: 0; /* Remove any default margin for h1 */
-  }
-
-  #header {
-    width: 100%;
-    height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .container {
-    padding: 10px 7%;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  nav ul {
-    margin-top: -60px;
-  }
-
-  .logo {
-    width: 170px;
-    height: 120px;
-  }
-
-  nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-  }
-
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-  }
-
-  nav ul li a::after {
-    content: "";
-    width: 0%;
-    height: 5px;
-    background: #F065D7;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-  }
-
-  nav ul li a:hover::after {
-    width: 100%;
-  }
-
-  .header-text {
-    margin-top: 40%;
-    font-size: 30px;
-    text-align: right;
-  }
-
-  .header-text h1 {
-    margin-top: 20px;
-    font-size: 60px;
-    text-align: right;
-  }
-
-  .btn-shine {
-    background: linear-gradient(to bottom, #F065D7 0%, #F4A764 72%);
-    background-size: 200%;
-    background-position: top;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: blink 2s ease-in-out infinite;
-  }
-
-  @keyframes blink {
-    0% {
-      opacity: 0.8;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 0.8;
-    }
-  }
-
-  /* Add media query for smaller screens */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 24px; /* Set a fixed font size for smaller screens */
-    }
+      <!-- !------------- CONTACT -------------! -->
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-paper-plane"></i>soomalh4@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i>437-265-7801</p>
+              <div class="social-icons">
+                <a href="https://twitter.com/HarkiratS31_" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="soomalh4@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/hsoomal/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Harkirat78?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
+              </div>
+              <a href="ResumeHarkiratSoomal_.pdf" download class="btn btn2">Download my Resume</a>
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p><span>&copy</span> Harkirat Soomal 2022. All rights reserved.</p>
+        </div>
+      </div>
     
-    .header-text {
-      font-size: 18px; /* Set a fixed font size for smaller screens */
-    }
+      <a href="#" class="top">Back to Top <i class="fa-regular fa-circle-up"></i></a>
     
-    .header-text h1 {
-      font-size: 36px; /* Set a fixed font size for smaller screens */
-    }
-  }
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var sidemenu = document.getElementById("sidemenu");
+  
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+          }
+  
+          for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+          }
+  
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+  
+        function openmenu(){
+          sidemenu.style.right = "0";
+        }
+  
+        function closemenu(){
+          sidemenu.style.right = "-200px";
+        }
+      </script>
+  
+      <script>
+        const seeMoreBtn = document.querySelector('.btn');
+        const project = document.querySelector('.work-list');
+  
+        seeMoreBtn.addEventListener('click', (e)=>{
+          project.classList.toggle('show-more');
+          if(seeMoreBtn.innerText === 'See more'){
+            seeMoreBtn.innerText = 'See less';
+          }else{
+            seeMoreBtn.innerText = 'See more';
+          }
+        })
+      </script>
+  
+      <script>
+        const Top = document.querySelector(".top");
+  
+        window.addEventListener("scroll", ()=>{
+          if(window.pageYOffset > 170){
+            Top.classList.add("active");
+          }else{
+            Top.classList.remove("active");
+          }
+        })
+      </script>
+  
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwwxUU1uua2dJNABd1EWUqaA2Xs6Ys67cRMRTi2o43s6QCCWObmWthkGq5z3o3YXiyFyw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+  
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+              msg.innerHTML = "Message sent successfully!"
+              setTimeout(function(){
+                msg.innerHTML = ""
+              }, 7000)
+              form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
 
-
-  /* ABOUT ME SECTION */
-
-
-  #about {
-    padding: 80px 0;
-    color: #ababab;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .about-col-1 {
-    flex-basis: 30%;
-    order: 2; /* Move this column to the right */
-  }
-  
-  .about-col-1 img {
-    width: 100%;
-    object-position: 20%;
-    border-radius: 15px;
-  }
-  
-  .about-col-2 {
-    flex-basis: 60%;
-    order: 1; /* Move this column to the left */
-  }
-  
-  .about-col-2 p {
-    margin-top: 30px;
-    text-align: justify;
-    font-size: 18px;
-    text-align: right; /* Align text to the right */
-  }
-  
-  #colour{
-    color: #d369bf;
-    font-weight: 600;
-  }
-  
-  .sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-  }
-  
-  .tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
-  }
-  
-  .tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    transition: transform 0.5s;
-  }
-  
-  .tab-links:hover {  
-    transform: translateY(-5px);
-  }
-  
-  .tab-links::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background: #d369bf;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-  }
-  
-  .tab-links.active-link::after {
-    width: 50%;
-  }
-  
-  .tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-  }
-  
-  .tab-contents ul li span {
-    color: #d369bf;
-    font-size: 19px;
-  }
-  
-  .tab-contents {
-    display: none;
-  }
-  
-  .tab-contents.active-tab {
-    display: block;
-  }
-
-
-
-/* PROJECTS SECTION */
-
-
-
-  #projects {
-    padding: 50px 0;
-  }
-
-  .work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Use auto-fit to adjust columns based on screen size */
-    grid-gap: 40px;
-    margin-top: 50px;
-  }
-
-  .work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .work img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-  }
-
-  .layer {
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #d369bf);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 20px; /* Reduce padding for smaller screens */
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-  }
-
-  .layer h3 {
-    font-weight: 700;
-    margin-bottom: 10px; /* Reduce margin for smaller screens */
-  }
-
-  .layer a {
-    margin-top: 10px; /* Reduce margin for smaller screens */
-    color: #1b6a6e;
-    text-decoration: none;
-    font-size: 16px; /* Increase font size for better readability */
-    line-height: 40px; /* Reduce line height for smaller screens */
-    background: #fff;
-    width: 40px; /* Reduce width for smaller screens */
-    height: 40px; /* Reduce height for smaller screens */
-    border-radius: 50%;
-    text-align: center;
-  }
-
-  .work:hover img {
-    transform: scale(1.1);
-  }
-
-  .work:hover .layer {
-    height: 100%;
-  }
-
-  .btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #d369bf;
-    padding: 16px 30px; /* Reduce padding for smaller screens */
-    border-radius: 6px;
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    font-size: 15px;
-    transition: background 0.5s;
-  }
-
-  .btn:hover {
-    background: rgba(154, 240, 245, 0.2);
-    cursor: pointer;
-  }
-
-  .moreProjects {
-    display: none;
-  }
-
-  .work-list.show-more .moreProjects {
-    display: grid;
-  }
-
-  /* Add media query for smaller screens */
-  @media (max-width: 768px) {
-    .layer {
-      font-size: 12px; /* Adjust font size for smaller screens */
-      padding: 0 10px; /* Reduce padding for smaller screens */
-    }
-
-    .layer h3 {
-      margin-bottom: 5px; /* Reduce margin for smaller screens */
-    }
-
-    .layer a {
-      margin-top: 5px; /* Reduce margin for smaller screens */
-      font-size: 14px; /* Adjust font size for smaller screens */
-      line-height: 30px; /* Reduce line height for smaller screens */
-      width: 30px; /* Reduce width for smaller screens */
-      height: 30px; /* Reduce height for smaller screens */
-    }
-  }
-
-
-
-
- /* CONTACT SECTION */
-
-
-
-
-  .contact-left {
-    flex-basis: 35%;
-  }
-  
-  .contact-right {
-    flex-basis: 60%;
-  }
-  
-  .contact-left p {
-    margin-top: 30px;
-  }
-  
-  .contact-left p i {
-    color: #d369bf;
-    margin-right: 15px;
-    font-size: 25px;
-    transition: transform 0.5s;
-  }
-  
-  .contact-left p i:hover {  
-    transform: translateY(-5px);
-  }
-  
-  .social-icons {
-    margin-top: 30px;
-  }
-  
-  .social-icons a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-  }
-  
-  .social-icons a:hover {
-    color: #d369bf;
-    transform: translateY(-5px);
-  }
-  
-  .btn.btn2 {
-    display: inline-block;
-    background: #d369bf;
-    color: rgba(0, 0, 0, 2);
-    transition: background 0.2s;
-  }
-  
-  .btn.btn2:hover {
-    background: rgba(154, 240, 245, 0.2);
-    color: #fff;
-  }
-  
-  .contact-right form {
-    width: 100%;
-  }
-  
-  form input,
-  form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-  }
-  
-  form .btn2 {
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  
-  .copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-  }
-  
-  .copyright span {
-    color: #d369bf;
-  }
-  
-  #msg {
-    color: #d369bf;
-    margin-top: -40px;
-    display: block;
-  }
-  
-/* !------------- BACK TO TOP -------------! */
-  .top {
-    text-decoration: none;
-    padding: 10px;
-    color: #fff;
-    font-weight: 500;
-    background: #262626;
-    position: fixed;
-    bottom: 16px;
-    right: 32px;
-    border-radius: 100px;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s;
-  }
-  
-  .top.active {
-    bottom: 32px;
-    pointer-events: auto;
-    opacity: 1;
-  }
-  
-  .top i {
-    color: #d369bf;
-    padding-left: 5px;
-    font-size: 22px;
-  }
-  
-  /* !------------- CSS FOR PHONE -------------! */
-  nav .fa-solid {
-    display: none;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    #header {
-      background-image: url(images/phone-laptop.jpg);
-    }
-  
-    .header-text {
-      margin-top: 120%;
-      font-size: 16px;
-    }
-  
-    .header-text h1 {
-      font-size: 30px;
-    }
-  
-    nav .fa-solid {
-      display: block;
-      font-size: 30px;
-    }
-  
-    nav ul {
-      background: #262626;
-      position: fixed;
-      top: 0;
-      right: -200px;
-      width: 200px;
-      height: 100vh;
-      padding-top: 50px;
-      z-index: 2;
-      transition: right 0.5s;
-    }
-  
-    nav ul li {
-      display: block;
-      margin: 25px;
-    }
-  
-    nav ul .fa-solid {
-      position: absolute;
-      top: 25px;
-      left: 25px;
-      cursor: pointer;
-      color: #fff;
-    }
-  
-    .sub-title {
-      font-size: 40px;
-    }
-  
-    .about-col-1,
-    .about-col-2 {
-      flex-basis: 100%;
-    }
-  
-    .about-col-1 {
-      margin-bottom: 30px;
-    }
-  
-    .about-col-2 {
-      font-size: 14px;
-    }
-  
-    .tab-links {
-      font-size: 16px;
-      margin-right: 40px;
-    }
-  
-    .contact-left,
-    .contact-right {
-      flex-basis: 100%;
-    }
-  
-    .copyright {
-      font-size: 14px;
-    }
-  }
+      </script>
+  </body>
+</html>
