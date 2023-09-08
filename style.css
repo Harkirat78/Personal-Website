@@ -1,18 +1,18 @@
-* {
+  * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
   }
-  
+
   /* Red: E87169
-     Blue: 9AF0F5
+    Blue: 9AF0F5
   */
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     background: #080808;
     color: #fff;
@@ -22,18 +22,18 @@
 
   .container {
     width: 100%;
-    max-width: 1500px; 
+    max-width: 1500px;
     margin: 0 auto;
   }
 
   .header-text {
-    text-align: center;
-    padding: 20px;
+    text-align: right; /* Keep the text aligned to the right */
   }
 
   h1 {
     font-size: 4vw;
     line-height: 1.2;
+    margin: 0; /* Remove any default margin for h1 */
   }
 
   #header {
@@ -43,40 +43,40 @@
     background-size: cover;
     background-position: center;
   }
-  
+
   .container {
     padding: 10px 7%;
   }
-  
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+
   nav ul {
     margin-top: -60px;
-  }  
-  
+  }
+
   .logo {
     width: 170px;
     height: 120px;
   }
-  
+
   nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
   }
-  
+
   nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    position: relative;  
+    position: relative;
   }
-  
+
   nav ul li a::after {
     content: "";
     width: 0%;
@@ -87,17 +87,17 @@
     bottom: -6px;
     transition: 0.5s;
   }
-  
+
   nav ul li a:hover::after {
-    width: 100%;  
+    width: 100%;
   }
-  
+
   .header-text {
     margin-top: 40%;
     font-size: 30px;
     text-align: right;
   }
-  
+
   .header-text h1 {
     margin-top: 20px;
     font-size: 60px;
@@ -125,7 +125,22 @@
       opacity: 0.8;
     }
   }
-  
+
+  /* Add media query for smaller screens */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px; /* Set a fixed font size for smaller screens */
+    }
+    
+    .header-text {
+      font-size: 18px; /* Set a fixed font size for smaller screens */
+    }
+    
+    .header-text h1 {
+      font-size: 36px; /* Set a fixed font size for smaller screens */
+    }
+  }
+
 
   /* ABOUT ME SECTION */
 
@@ -228,36 +243,34 @@
 
 
 
-
- /* PROJECTS SECTION */
-
+/* PROJECTS SECTION */
 
 
 
   #projects {
     padding: 50px 0;
   }
-  
+
   .work-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 0.5fr));    
-    grid-gap: 40px;  
-    margin-top: 50px;    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Use auto-fit to adjust columns based on screen size */
+    grid-gap: 40px;
+    margin-top: 50px;
   }
-  
+
   .work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
   }
-  
+
   .work img {
-    width: 100%;  
+    width: 100%;
     border-radius: 10px;
-    display: block;  
-    transition: transform 0.5s;     
+    display: block;
+    transition: transform 0.5s;
   }
-  
+
   .layer {
     width: 100%;
     height: 0%;
@@ -271,44 +284,44 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px; /* Reduce padding for smaller screens */
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
   }
-  
+
   .layer h3 {
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduce margin for smaller screens */
   }
-  
+
   .layer a {
-    margin-top: 20px;
+    margin-top: 10px; /* Reduce margin for smaller screens */
     color: #1b6a6e;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
+    font-size: 16px; /* Increase font size for better readability */
+    line-height: 40px; /* Reduce line height for smaller screens */
     background: #fff;
-    width: 60px;
-    height: 60px;
+    width: 40px; /* Reduce width for smaller screens */
+    height: 40px; /* Reduce height for smaller screens */
     border-radius: 50%;
     text-align: center;
   }
-  
+
   .work:hover img {
     transform: scale(1.1);
   }
-  
+
   .work:hover .layer {
     height: 100%;
   }
-  
+
   .btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #d369bf;
-    padding: 16px 50px;
+    padding: 16px 30px; /* Reduce padding for smaller screens */
     border-radius: 6px;
     text-decoration: none;
     background-color: #000;
@@ -316,26 +329,44 @@
     font-size: 15px;
     transition: background 0.5s;
   }
-  
+
   .btn:hover {
     background: rgba(154, 240, 245, 0.2);
     cursor: pointer;
   }
-  
-  .moreProjects{
+
+  .moreProjects {
     display: none;
   }
-  
-  .work-list.show-more .moreProjects{
+
+  .work-list.show-more .moreProjects {
     display: grid;
   }
 
+  /* Add media query for smaller screens */
+  @media (max-width: 768px) {
+    .layer {
+      font-size: 12px; /* Adjust font size for smaller screens */
+      padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .layer h3 {
+      margin-bottom: 5px; /* Reduce margin for smaller screens */
+    }
+
+    .layer a {
+      margin-top: 5px; /* Reduce margin for smaller screens */
+      font-size: 14px; /* Adjust font size for smaller screens */
+      line-height: 30px; /* Reduce line height for smaller screens */
+      width: 30px; /* Reduce width for smaller screens */
+      height: 30px; /* Reduce height for smaller screens */
+    }
+  }
 
 
 
 
  /* CONTACT SECTION */
-
 
 
 
