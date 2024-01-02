@@ -33,3 +33,55 @@ function opentab(tabName) {
   // Event listener to submit the form
   document.querySelector("form[name='submit-to-google-sheet']").addEventListener("submit", submitForm);
   
+
+
+  /* For Projects Section */
+
+  // Wait for the DOM to be ready
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the projects section
+  var projectsSection = document.getElementById('projects');
+
+  // Function to check if an element is in the viewport
+  function isInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
+
+  // Function to handle scroll events
+  function handleScroll() {
+      // Check if the projects section is in the viewport
+      if (isInViewport(projectsSection)) {
+          // Add the 'animated' class to each project element
+          var projects = document.querySelectorAll('.work:not(.animated)');
+          projects.forEach(function (project) {
+              project.classList.add('animated');
+          });
+
+          // Remove the scroll event listener to avoid unnecessary processing
+          window.removeEventListener('scroll', handleScroll);
+      }
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
+
+  // Initial check on page load
+  handleScroll();
+});
+
+
+
+
+ddocument.getElementById('seeMoreBtn').addEventListener('click', function () {
+  var hiddenProjects = document.querySelectorAll('.work.hidden');
+  for (var i = 0; i < hiddenProjects.length; i++) {
+    hiddenProjects[i].classList.remove('hidden');
+  }
+  this.style.display = 'none';
+});
