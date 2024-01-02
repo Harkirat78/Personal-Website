@@ -4,5 +4,5 @@ This repo contains code regarding my personal portfolio made using Javascript/Ht
 
 You can view this interactive site via:
 
-Link:  https://harkirat78.github.io/Personal-Website/
+Link: https://harkirat78.github.io/Personal-Website/
 
