@@ -9,6 +9,8 @@
     Blue: 9AF0F5
   */
 
+  
+
   html {
     scroll-behavior: smooth;
   }
@@ -247,6 +249,8 @@
 
 /* PROJECTS SECTION */
 
+/* PROJECTS SECTION */
+
 #projects {
   padding: 50px 0;
 }
@@ -287,7 +291,7 @@
   padding: 0 20px;
   text-align: center;
   font-size: 14px;
-  transition: height 0.5s;
+  transition: height 0.5s, font-size 0.5s;
 }
 
 .layer h3 {
@@ -295,17 +299,23 @@
   margin-bottom: 10px;
 }
 
+.layer p {
+  font-size: 14px;
+  transition: font-size 0.5s;
+}
+
 .layer a {
   margin-top: 10px;
   color: #1b6a6e;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 40px;
+  font-size: 12px; /* Reduced font size */
+  line-height: 30px; /* Adjusted line height */
   background: #fff;
-  width: 40px;
-  height: 40px;
+  width: 30px; /* Reduced width */
+  height: 30px; /* Reduced height */
   border-radius: 50%;
   text-align: center;
+  transition: font-size 0.5s, width 0.5s, height 0.5s; /* Smooth transition */
 }
 
 .work:hover img {
@@ -314,20 +324,6 @@
 
 .work:hover .layer {
   height: 100%;
-}
-
-/* Slide in animation */
-@keyframes slideInFromLeft {
-  0% {
-      transform: translateX(-100%);
-  }
-  100% {
-      transform: translateX(0);
-  }
-}
-
-.work:not(.animated) {
-  animation: slideInFromLeft 0.5s ease-out;
 }
 
 .btn {
@@ -357,7 +353,10 @@
   display: grid;
 }
 
-/* Add media query for smaller screens */
+.work-list.show-more .layer p {
+  font-size: 12px;
+}
+
 @media (max-width: 768px) {
   .layer {
       font-size: 12px;
@@ -370,13 +369,12 @@
 
   .layer a {
       margin-top: 5px;
-      font-size: 14px;
-      line-height: 30px;
-      width: 30px;
-      height: 30px;
+      font-size: 10px; /* Smaller font size for small screens */
+      line-height: 25px; /* Adjusted line height */
+      width: 25px; /* Reduced width for small screens */
+      height: 25px; /* Reduced height for small screens */
   }
 
-  
   #projects .work p {
     font-size: 14px;
   }
@@ -384,21 +382,11 @@
   #projects.show-more .work p {
     font-size: 12px;
   }
-
-  .links-container {
-    /*display: flex;*/
-  }
-
-  /*
-  .links-container a {
-    display: flex;
-    margin-right: 10px;
-  }*/
-
+  
   .git-icon i {
     color: #333;
   }
-  
+
   .vercel-icon i {
     color: #000;
   }
@@ -407,8 +395,6 @@
     margin-left: 10px;
   }
 }
-
-
 
 
 
