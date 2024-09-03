@@ -35,7 +35,7 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="images/faceimage copy.png" />
+            <img src="images/LinkI.png" />
           </div>
           <div class="about-col-2">            
             <h1 class="sub-title">About Me</h1> <br>
@@ -131,10 +131,10 @@
       <div class="work">
         <img src="images/AutoHark.png">
         <div class="layer">
-          <h3>AutoHark - Car Dealership App</h3>
+          <h3>AutoHark - Dealership App</h3>
           <p>                                 
-            Fullstack React and Next.js program visualizing an immersive car dealership platform for buying/selling transactions
-            seamlessly blending real-time use, appealing design & intuitive interaction with accurate data via API use
+            Fullstack React and Next.js program visualizing an car dealership platform for transactions
+            blending real-time use with accurate data via API use
           </p>
           <a href="https://github.com/Harkirat78/AutoHark-CarDealershipApp" class="git-icon">
             <i class="fab fa-github"></i>
@@ -198,23 +198,13 @@
       
     </div>        
     <button id="seeMoreBtn" class="btn">See more</button>
+    <button id="seeMoreGit" class="btn">See Github</button>
   </div>
 
   <script>
-    document.getElementById('seeMoreBtn').addEventListener('click', function () {
-    var moreProjects = document.querySelector('.work-list');
-
-    // Toggle the 'show-more' class to show/hide additional projects
-    moreProjects.classList.toggle('show-more');
-
-    // Update the button text based on the current state
-    if (moreProjects.classList.contains('show-more')) {
-      this.textContent = 'See less';
-    } else {
-      this.textContent = 'See more';
-    }
-  });
-
+    document.getElementById('seeMoreGit').addEventListener('click', function () {
+      window.location.href = 'https://github.com/Harkirat78';
+    });
   </script>
 
 
