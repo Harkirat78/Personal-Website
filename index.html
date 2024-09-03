@@ -173,10 +173,11 @@
             Deployed a full-stack, multi-threaded C billiards game GUI with optimized server-side algorithms, efficient memory allocation in C & advanced database management in MySQL, applying OOP principles for real-time physics modeling
           </p>
           <a href="https://github.com/Harkirat78/Billiards-Physics-Game" class="vercel-icon">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
       </div>
-
-
+      
       <span class="moreProjects">
         <div class="work">
           <img src="images/mancala.png">
@@ -191,31 +192,35 @@
         </div>            
       </span>
       
+
+
+      
+      
     </div>        
-    <button id="seeMoreBtn" class="btn"> See more</button>
-    <!-- <a href="#" class="btn">See more</a> -->
-    <!-- Add this script -->
+    <button id="seeMoreBtn" class="btn">See more</button>
+  </div>
+
   <script>
     document.getElementById('seeMoreBtn').addEventListener('click', function () {
-      var projectsContainer = document.getElementById('projects');
-      projectsContainer.classList.toggle('show-more');
-      
-      // Add this line to resize the text
-      document.querySelectorAll('#projects.show-more .work p').forEach(function(para) {
-        para.style.fontSize = '11px';
-      });
-    });
+    var moreProjects = document.querySelector('.work-list');
+
+    // Toggle the 'show-more' class to show/hide additional projects
+    moreProjects.classList.toggle('show-more');
+
+    // Update the button text based on the current state
+    if (moreProjects.classList.contains('show-more')) {
+      this.textContent = 'See less';
+    } else {
+      this.textContent = 'See more';
+    }
+  });
+
   </script>
+
 
   </div>
 </div>
 
-<script>
-  document.getElementById('seeMoreBtn').addEventListener('click', function () {
-    var projectsContainer = document.getElementById('projects');
-    projectsContainer.classList.toggle('show-more');
-  });
-</script>
 
 
       <!-- !------------- CONTACT -------------! -->
